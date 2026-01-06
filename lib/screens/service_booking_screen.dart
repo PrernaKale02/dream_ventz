@@ -87,19 +87,43 @@ class _ServiceBookingScreenState extends State<ServiceBookingScreen> {
                           ),
                         ),
                         // Quantity Controls
-                        if (quantity == 0)
+                        if (service.id == '1')
+                          SizedBox(
+                            width: 100,
+                            child: TextFormField(
+                              initialValue: quantity > 0 ? quantity.toString() : null,
+                              keyboardType: TextInputType.number,
+                              decoration: const InputDecoration(
+                                labelText: 'Qty',
+                                border: OutlineInputBorder(),
+                                contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                isDense: true,
+                              ),
+                              onChanged: (value) {
+                                setState(() {
+                                  int? val = int.tryParse(value);
+                                  if (val != null && val >= 0) {
+                                    _selectedServices[service.id] = val;
+                                  } else {
+                                    _selectedServices.remove(service.id);
+                                  }
+                                });
+                              },
+                            ),
+                          )
+                        else if (quantity == 0)
                           ElevatedButton(
                             onPressed: () {
                               setState(() {
                                 _selectedServices[service.id] = 1;
                               });
                             },
-                             style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFFD4AF37),
-                                foregroundColor: Colors.white,
-                                minimumSize: const Size(60, 32),
-                                padding: EdgeInsets.zero,
-                             ),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFFD4AF37),
+                              foregroundColor: Colors.white,
+                              minimumSize: const Size(60, 32),
+                              padding: EdgeInsets.zero,
+                            ),
                             child: const Text('Add'),
                           )
                         else
