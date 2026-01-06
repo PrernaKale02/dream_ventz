@@ -30,19 +30,9 @@ class WelcomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Spacer(),
-                const Icon(
-                  Icons.diamond_outlined,
-                  size: 80,
-                  color: Color(0xFFD4AF37),
-                ),
-                const SizedBox(height: 16),
-                Text(
-                  'DreamVentz',
-                  style: GoogleFonts.playfairDisplay(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFFD4AF37),
-                  ),
+                Image.asset(
+                  'assets/images/dv_logo.jpg',
+                  height: 150,
                 ),
                 const SizedBox(height: 8),
                 const Text(
