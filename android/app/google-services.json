@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583194836480",
+    "project_id": "dreamventz-2dfb0",
+    "storage_bucket": "dreamventz-2dfb0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583194836480:android:0dc87f9fb4addce69a22e5",
+        "android_client_info": {
+          "package_name": "com.example.dream_ventz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnUjv3rwyurIUv9rdi0Jn1Ee1vipAxbxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
